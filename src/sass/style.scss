@@ -83,11 +83,13 @@ section,
   /////////////////////// */
 
 .page-header {
-  padding: 2em 0;
+  padding: 0.5em 0;
+  align-items: center;
+  background-color: var(--clr-primary-200);
 }
 
-.page-header {
-  padding: 2em 0;
+.logo-png {
+  width: 30%; 
 }
 
 .page-header__content {
