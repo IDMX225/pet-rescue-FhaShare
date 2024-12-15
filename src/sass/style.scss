@@ -82,35 +82,40 @@ section,
   Header
   /////////////////////// */
 
-.page-header {
-  padding: 0.5em 0;
-  align-items: center;
-  background-color: var(--clr-primary-200);
+.logo-png {
+  width: 15%; 
 }
 
-.logo-png {
-  width: 30%; 
+.page-header {
+  padding: 0.5em 0;
+  background-color: var(--clr-primary-100);
+  border-bottom: 5px solid var(--clr-primary-400);
 }
 
 .page-header__content {
-  display: flex;
-  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-list {
+  display: flex;
   margin: 0;
   padding: 0;
+  justify-content: flex-end;
+  gap: 2.5em;
 }
 
 .nav-list a {
   color: var(--clr-neutral-900);
   text-decoration: none;
+  font-weight: bold;
 }
 
 .nav-list a:focus,
 .nav-list a:hover {
-  color: var(--clr-primary-400);
-  text-decoration: underline;
+  color: var(--clr-primary-100);
+  background-color: var(--clr-primary-400);
+  padding: 0.8em; 
 }
 
 /* //////////////////////
