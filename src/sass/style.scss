@@ -415,11 +415,25 @@ h1 {
 
     .volunteer-roles .role {
       grid-template-columns: 1fr;
+      align-items: center;
+    }
 
-      .role__image {
-        margin-bottom: 1rem;
+    .role__image-container {
+      display: flex;
+      justify-content: center; 
+    }
+
+    .volunteer-pictures {
+      div {
+        gap: 1rem; 
+      }
+  
+      .volunteer__image {
+        width: 150px; 
       }
     }
   }
+
+
 
 }
