@@ -6,12 +6,12 @@ layout: 'base.njk'
 <section class="hero">
   <div class="container flow">
     <div class="hero__content flow">
-      <h1 class="section-title">Front Page</h1>
-      <p>Puppy ipsum.</p>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <h1 class="section-title">About Us</h1>
+      <p>At Canopy Share Pet Rescue, every animal deserves a second chance at life. Our mission is to create a loving haven for pets in need, nurturing them with compassion while guiding them to their forever homes where they can truly thrive. We are committed to rescuing, rehabilitating, and rehoming diverse pets, including dogs, cats, rabbits, birds, and fish.</p>
+      <p>The inspiration behind Canopy Share Pet Rescue comes from the concept of a canopy—a sheltering cover that provides protection, safety, and care. Just like the natural canopy of a forest offers refuge to wildlife, we aim to create a compassionate network for animals in need. Established with the vision of building a community-driven rescue initiative, we encourage individuals to not only adopt but also share their resources, time, and love to help pets in distress.</p>
       <div class="flex-group">
-        <a href="#featured-articles" class="btn btn--primary">Featured Items</a>
-        <a href="./portfolio" class="btn btn--neutral">Link to Portfolio Page</a>
+        <a href="#featured-articles" class="btn btn--primary">Featured Blog</a>
+        <a href="./contact" class="btn btn--neutral">Contact Us</a>
       </div>
     </div>
     <div>
@@ -22,7 +22,7 @@ layout: 'base.njk'
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center ">Featured Items</h2>
+    <h2 class="section-title text-center ">Featured Blog</h2>
     <ul role="list" class="articles__list flow">
       {%- for post in collections.featured | reverse -%}
       {% include 'article-snippet.njk' %}
