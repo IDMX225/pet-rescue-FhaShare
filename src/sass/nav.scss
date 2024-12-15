@@ -1,0 +1,137 @@
+/* General Reset */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header */
+  .page-header {
+    background-color: var(--clr-primary-100);
+    border-bottom: 5px solid var(--clr-primary-400);
+    padding: 0.5em 0;
+    width: 100%;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+  
+    .container {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo-png {
+      width: 15%; /* Adjust logo size */
+    }
+  }
+  
+  /* Hamburger Menu for Mobile */
+  .nav-toggle {
+    display: none; /* Hide checkbox */
+  }
+  
+  .nav-toggle-label {
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2001;
+  
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 30px;
+      height: 3px;
+      background-color: var(--clr-primary-400);
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+  }
+  
+  /* Navigation Menu */
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+  
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 2em;
+      padding: 0;
+      margin: 0;
+  
+      li a {
+        color: var(--clr-neutral-900);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: color 0.3s, background-color 0.3s;
+  
+        &:hover {
+          color: var(--clr-neutral-100);
+          background-color: var(--clr-primary-400);
+          padding: 0.8em;
+        }
+      }
+    }
+  }
+  
+  /* Mobile-Specific Styles */
+  @media screen and (max-width: 768px) {
+
+    .page-header {
+        position: fixed;
+    }
+    .nav-toggle-label {
+      display: flex;
+      cursor: pointer;
+      padding-right: 3em;
+    }
+  
+    .navbar {
+      display: none; 
+      flex-direction: column;
+      align-items: flex-start;
+      top: 100%;
+      background-color: var(--clr-primary-100);
+      padding: 1em;
+    }
+  
+    /* Show navbar when toggled */
+    #nav-toggle:checked ~ .navbar {
+      display: flex;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      gap: 1em;
+
+      li a {
+        color: var(--clr-neutral-900);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: color 0.3s, background-color 0.3s;
+  
+        &:hover {
+          color: var(--clr-neutral-100);
+          background-color: var(--clr-primary-400);
+          padding: 0.8em;
+        }
+    }
+  }
+}

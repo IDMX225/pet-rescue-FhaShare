@@ -1,38 +1,64 @@
 <header class="page-header">
   <div class="container">
-    <div
-      class="page-header__content">
-      <!-- <div class="logo">
-      
-      </div> -->
+    <div class="page-header__content">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/">
+          <img 
+            src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/CS-Logo_gtrx87.png" 
+            class="logo-png" 
+            aria-label="Home page" 
+            alt="Canopy Share Pet Rescue logo"
+          />
+        </a>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="container">
+                <style>
+                    .container {
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+
+                    .change .bar1 {
+                        transform: translate(0, 7px) rotate(-45deg);
+                    }
+
+                    .change .bar2 {
+                        opacity: 0;
+                    }
+
+                    .change .bar3 {
+                        transform: translate(0, -7px) rotate(45deg);
+                    }
+                </style>
+                
+        <div class="hamburger-icon" onclick="toggleMenu(this)">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </label>
+
+      <!-- Navigation Links -->
       <nav class="navbar">
-        <nav class="grid-group">
-          <div class="logo">
-            <a href="/"><img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/CS-Logo_gtrx87.png" class= "logo-png" aria-label = "home page" alt= "
-                canopy share pet rescue logo"> </a>
-          </div>
-         
-          <div class="navbar-links">
-            <ul role="list" class="nav-list flex-group">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/adopt/">Adopt</a>
-              </li>
-              <li>
-                <a href="/petcare/">Pet Care</a>
-              </li>
-              <li>
-                <a href="/volunteer/">Volunteer</a>
-              </li>
-              <li>
-                <a href="/contact/">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <ul role="list" class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/adopt/">Adopt</a></li>
+          <li><a href="/petcare/">Pet Care</a></li>
+          <li><a href="/volunteer/">Volunteer</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
       </nav>
     </div>
   </div>
 </header>
+
+<script>
+  function toggleMenu(x) {
+    x.classList.toggle("change");
+  }
+</script>

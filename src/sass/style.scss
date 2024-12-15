@@ -8,6 +8,10 @@
   General styling
   /////////////////////// */
 
+ html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
@@ -82,41 +86,6 @@ section,
   Header
   /////////////////////// */
 
-.logo-png {
-  width: 15%; 
-}
-
-.page-header {
-  padding: 0.5em 0;
-  background-color: var(--clr-primary-100);
-  border-bottom: 5px solid var(--clr-primary-400);
-}
-
-.page-header__content {
-  align-items: center;
-  width: 100%;
-}
-
-.nav-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  justify-content: flex-end;
-  gap: 2.5em;
-}
-
-.nav-list a {
-  color: var(--clr-neutral-900);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-list a:focus,
-.nav-list a:hover {
-  color: var(--clr-primary-100);
-  background-color: var(--clr-primary-400);
-  padding: 0.8em; 
-}
 
 /* //////////////////////
   Footer
