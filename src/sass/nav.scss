@@ -28,18 +28,18 @@ html {
     }
   
     .logo-png {
-      width: 15%; /* Adjust logo size */
+      width: 15%; 
     }
   }
   
   /* Hamburger Menu for Mobile */
   .nav-toggle {
-    display: none; /* Hide checkbox */
+    display: none; 
   }
   
   .nav-toggle-label {
     cursor: pointer;
-    display: none; /* Hidden by default */
+    display: none; 
     flex-direction: column;
     justify-content: space-between;
     width: 30px;

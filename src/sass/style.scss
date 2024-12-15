@@ -1,7 +1,7 @@
 @use "./abstracts/variables";
 @use "./base/reset";
 @use "./base/typography";
-
+@use "./components/_forms";
 
 
 /* //////////////////////
@@ -279,4 +279,10 @@ h1 {
 .btn--neutral:focus {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
+}
+
+@media screen and (max-width: 768px) {
+  html, body {
+      margin-top: 1.5rem;
+  }
 }
