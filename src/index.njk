@@ -5,6 +5,9 @@ layout: 'base.njk'
 
 <section class="hero">
   <div class="container flow">
+    <div>
+      <img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734143860/Pets_jguxvg.png" alt="Canopy Share Pet Rescue" class="hero__image">
+    </div>
     <div class="hero__content flow">
       <h1 class="section-title">About Us</h1>
       <p>At Canopy Share Pet Rescue, every animal deserves a second chance at life. Our mission is to create a loving haven for pets in need, nurturing them with compassion while guiding them to their forever homes where they can truly thrive. We are committed to rescuing, rehabilitating, and rehoming diverse pets, including dogs, cats, rabbits, birds, fish, and etc.</p>
@@ -14,15 +17,12 @@ layout: 'base.njk'
         <a href="./contact" class="btn btn--neutral">Contact Us</a>
       </div>
     </div>
-    <div>
-      <img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734143860/Pets_jguxvg.png" alt="Canopy Share Pet Rescue" class="hero__image">
-    </div>
   </div>
 </section>
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center ">Adopt Me</h2>
+    <h2 class="section-title text-center ">Featured Blog</h2>
     <ul role="list" class="articles__list flow">
       {%- for post in collections.featured | reverse -%}
       {% include 'article-snippet.njk' %}
