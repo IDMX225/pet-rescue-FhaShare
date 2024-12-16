@@ -1,0 +1,37 @@
+---
+layout: 'base.njk'
+---
+
+<article class="main-article">
+  <div class="container container--narrow flow">
+    <!-- Animal Image -->
+    <figure class="main-article__figure">
+      <img src="{{ image }}" alt="{{ imgAlt }}">
+      <figcaption>{{ imgAlt }}</figcaption>
+    </figure>
+
+    <!-- Animal Details -->
+    <h1 class="animal-title">{{ name }}</h1>
+    <div class="animal-details">
+      <p><strong>Age:</strong> {{ ageYears }} Year(s) {{ ageMonths }} Month(s)</p>
+      <p><strong>Gender:</strong> {{ gender }}</p>
+      <p><strong>Breed:</strong> {{ breed }}</p>
+      <p><strong>Weight:</strong> {{ weight }}</p>
+      {% if notes %}
+      <p><strong>Status:</strong> {{ status }}</p>
+      <p><strong>Notes:</strong> {{ notes }}</p>
+      {% endif %}
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="animal-cta">
+      <a href="/apply/{{ name | slugify }}" class="btn btn--primary">Apply for Adoption</a>
+    </div>
+
+    <!-- Animal Description -->
+    <section class="animal-description">
+      <h2>About {{ name }}</h2>
+      {{ content | safe }}
+    </section>
+  </div>
+</article>

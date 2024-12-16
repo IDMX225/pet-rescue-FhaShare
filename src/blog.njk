@@ -3,3 +3,11 @@ title: "Blog Page"
 layout: 'base.njk'
 ---
 
+<div class="blog-page">
+  <h1 class="section-title">Recent Blog</h1>
+  <ul role="list" class="articles__list flow">
+    {%- for post in collections.blog | reverse -%}
+    {% include 'article-snippet.njk' %}
+    {%- endfor -%}
+  </ul>
+</div>

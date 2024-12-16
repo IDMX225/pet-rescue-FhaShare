@@ -167,16 +167,40 @@ h1 {
   Individual article page
   /////////////////////// */
 
-.main-article {
-  margin-bottom: 3rem;
-}
+  h1.article-title {
+    padding-top: 0.5em;
+    padding-bottom: 0.25em;
+    text-align: center;
+    text-shadow: 2.5px -1px 3px rgba(0, 0, 0, 0.31);
+    font-size: var(--fs-700);  
+  }
 
-.main-article__figure figcaption {
-  margin: 1rem 0;
-  font-size: var(--fs-300);
-  opacity: 0.9;
-}
+  .main-article {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    padding: 0 10%;
+  }
+  
+  .main-article__figure figcaption {
+    margin: 1rem 0;
+    font-size: var(--fs-300);
+    opacity: 0.9;
+  }
 
+  .main-article img, picture {
+    display: flex;
+    max-width: 60%;
+    justify-self: center;
+    align-self: center;
+    padding: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .main-article {
+      margin-top: 5rem;
+    }
+  }
+  
 /* //////////////////////
   Article snippets
   /////////////////////// */
@@ -241,6 +265,8 @@ h1 {
     grid-column-gap: 4em;
     grid-template-columns: 1fr 40%;
     grid-template-rows: min-content min-content min-content 1fr;
+    text-align: left;
+    
   }
 }
 
@@ -293,10 +319,15 @@ h1 {
 .volunteer-page {
   padding: 2rem 10%;
 
+  h1 {
+    font-size: var(--fs-700);
+  }
+
   h1, h2 {
     color: var(--clr-primary-500);
     margin-bottom: 1rem;
     margin-top: 1rem;
+    
   }
 
   .volunteer-roles {
@@ -407,7 +438,7 @@ h1 {
 @media screen and (max-width: 768px) {
   html,
   body {
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
 
   .volunteer-page {
@@ -433,7 +464,20 @@ h1 {
       }
     }
   }
+}
 
+/* //////////////////////
+// blog Page
+/////////////////////// */
+.blog-page {
+  padding: 5% 10%;
 
+  .articles__list {
+    margin-top: 2rem;
+  }
 
+  h1 {
+    padding-bottom: 0;
+    font-size: var(--fs-700);
+  }
 }

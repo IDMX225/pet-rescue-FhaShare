@@ -1,7 +1,22 @@
 /* //////////////////////
 // Forms Styles
 /////////////////////// */
+.contact-information {
+  padding: 5% 10%;
 
+  h1 {
+    padding-bottom: 2rem;
+    font-size: var(--fs-700);
+    color: var(--clr-primary-500);
+  }
+  
+  p {
+    font-size: var(--fs-500);
+    line-height: 1.5;
+    margin-left: 5rem;
+  }
+
+}
 .contact-form {
     max-width: 800px;
     margin: 2rem auto;
@@ -14,10 +29,16 @@
       text-align: center;
       margin-bottom: 1rem;
       color: var(--clr-primary-400);
+      font-size: var(--fs-600);
+    }
+    h3 {
+      font-size: var(--fs-500);
     }
 
     p {
         text-align: center;
+        font-size: var(--fs-400);
+        line-height: 1.5;
     }
   
     .form-selection {
