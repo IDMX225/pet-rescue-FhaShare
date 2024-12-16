@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pet Rescue site.">
+  <meta name="generator" content="Eleventy v2.0.1">
+  <title>Front Page</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="shortcut icon" href="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/favicon_ezult7.png" type="image/png">
+</head>
+
+<body>
+  <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/">
+          <img 
+            src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/CS-Logo_gtrx87.png" 
+            class="logo-png" 
+            aria-label="Home page" 
+            alt="Canopy Share Pet Rescue logo"
+          />
+        </a>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="container">
+                <style>
+                    .container {
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+
+                    .change .bar1 {
+                        transform: translate(0, 7px) rotate(-45deg);
+                    }
+
+                    .change .bar2 {
+                        opacity: 0;
+                    }
+
+                    .change .bar3 {
+                        transform: translate(0, -7px) rotate(45deg);
+                    }
+                </style>
+                
+        <div class="hamburger-icon" onclick="toggleMenu(this)">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </label>
+
+      <!-- Navigation Links -->
+      <nav class="navbar">
+        <ul role="list" class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/adopt/">Adopt</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/volunteer/">Volunteer</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function toggleMenu(x) {
+    x.classList.toggle("change");
+  }
+</script>
+
+  <main>
+    
+<section class="hero">
+  <div class="container flow">
+    <div>
+      <img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734143860/Pets_jguxvg.png" alt="Canopy Share Pet Rescue" class="hero__image">
+    </div>
+    <div class="hero__content flow">
+      <h1 class="section-title">About Us</h1>
+      <p>At Canopy Share Pet Rescue, every animal deserves a second chance at life. Our mission is to create a loving haven for pets in need, nurturing them with compassion while guiding them to their forever homes where they can truly thrive. We are committed to rescuing, rehabilitating, and rehoming diverse pets, including dogs, cats, rabbits, birds, fish, and etc.</p>
+      <p>The inspiration behind Canopy Share Pet Rescue comes from the concept of a canopy—a sheltering cover that provides protection, safety, and care. Just like the natural canopy of a forest offers refuge to wildlife, we aim to create a compassionate network for animals in need. Established with the vision of building a community-driven rescue initiative, we encourage individuals to not only adopt but also share their resources, time, and love to help pets in distress.</p>
+      <div class="flex-group">
+        <a href="#featured-articles" class="btn btn--primary">Featured Blog</a>
+        <a href="./contact" class="btn btn--neutral">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="featured-articles" class="featured-articles">
+  <div class="container flow">
+    <h2 class="section-title text-center ">Featured Blog</h2>
+    <ul role="list" class="articles__list flow"><li>
+  <article class="snippet">
+    <img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734310643/Adopt_don_t_shop_qigt2g.png" class="snippet__image" alt="Adopt don&#39;t shop">
+    <h3 class="snippet__title"> <a href="/blog/2024-12-01-blog-2/">How to Adopt a Pet: A Step-by-Step Guide</a></h3>
+    <p class="snippet__meta">by <span>Fhaungfha Suvannakajorn</span> on <span>December 01, 2024 </span>
+    </p>
+    <p class="snippet__body">Ready to adopt a pet? Follow our detailed guide to make the process smooth and fulfilling.</p>
+    <a href="/blog/2024-12-01-blog-2/" class="btn btn--primary">Learn More</a>
+  </article>
+</li>
+<li>
+  <article class="snippet">
+    <img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734305634/blog_1_-_1_pluwbm.png" class="snippet__image" alt="Tacking care the dog">
+    <h3 class="snippet__title"> <a href="/blog/2024-11-11-blog-1/">The Complete Guide to Caring for Your Pets</a></h3>
+    <p class="snippet__meta">by <span>Fhaungfha Suvannakajorn</span> on <span>November 11, 2024 </span>
+    </p>
+    <p class="snippet__body">Learn essential tips to provide the best care for your pets, ensuring their happiness, health, and longevity.</p>
+    <a href="/blog/2024-11-11-blog-1/" class="btn btn--primary">Learn More</a>
+  </article>
+</li>
+</ul>
+  </div>
+</section>
+  </main>
+  <footer class="site-footer">
+  <p>© 2024 Fhaungfha Suvannakajorn. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>

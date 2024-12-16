@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pet Rescue site.">
+  <meta name="generator" content="Eleventy v2.0.1">
+  <title>Volunteer Page</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="shortcut icon" href="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/favicon_ezult7.png" type="image/png">
+</head>
+
+<body>
+  <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/">
+          <img 
+            src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/CS-Logo_gtrx87.png" 
+            class="logo-png" 
+            aria-label="Home page" 
+            alt="Canopy Share Pet Rescue logo"
+          />
+        </a>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="container">
+                <style>
+                    .container {
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+
+                    .change .bar1 {
+                        transform: translate(0, 7px) rotate(-45deg);
+                    }
+
+                    .change .bar2 {
+                        opacity: 0;
+                    }
+
+                    .change .bar3 {
+                        transform: translate(0, -7px) rotate(45deg);
+                    }
+                </style>
+                
+        <div class="hamburger-icon" onclick="toggleMenu(this)">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </label>
+
+      <!-- Navigation Links -->
+      <nav class="navbar">
+        <ul role="list" class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/adopt/">Adopt</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/volunteer/">Volunteer</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function toggleMenu(x) {
+    x.classList.toggle("change");
+  }
+</script>
+
+  <main>
+    
+<section
+    class="volunteer-page">
+    <!-- Banner -->
+    <div class="volunteer__banner-container">
+        <img
+            src="https://res.cloudinary.com/dhvzkswkn/image/upload/c_crop,w_1080,h_300,g_auto/v1734292322/Volunteer_Banner_zknxmw.png"
+            alt="Volunteer"
+            class="volunteer__banner">
+    </div>
+    <!-- Page Content -->
+    <div class="container">
+        <h1>Volunteer with Us</h1>
+        <p>At
+            <strong>Canopy Share Pet Rescue</strong>, volunteers play a crucial role in helping us provide care, love, and support
+                to animals in need. Whether you’re passionate about hands-on animal care or helping behind the scenes, there’s a place
+                for you!</p>
+        <!-- Volunteer Roles -->
+        <section class="volunteer-roles">
+            <h2>Volunteer Roles</h2>
+            <!-- Role Cards -->
+            <div class="role">
+                <div class="role__image-container">
+                    <img
+                        src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734292320/Animal_Care_Assistant_j574wm.png"
+                        alt="Animal Care Assistant"
+                        class="role__image">
+                </div>
+                <div class="role__content">
+                    <h3>Animal Care Assistant</h3>
+                    <p>Assist with the daily care of pets including feeding, cleaning enclosures, and providing exercise and socialization
+                        for dogs, cats, rabbits, and other animals in our care.</p>
+                    <ul>
+                        <li>Feed and water the animals at scheduled times.</li>
+                        <li>Clean and sanitize enclosures and common areas.</li>
+                        <li>Play, walk, and socialize with animals.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="role">
+                <div class="role__image-container">
+                    <img
+                        src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734292320/Adoption_Event_Volunteer_syh7ow.png"
+                        alt="Adoption Event Volunteer"
+                        class="role__image">
+                </div>
+                <div class="role__content">
+                    <h3>Adoption Event Volunteer</h3>
+                    <p>Help coordinate and manage adoption events where we showcase animals to potential adopters. Be the friendly face that
+                        helps match families with their new furry friends.</p>
+                    <ul>
+                        <li>Set up and break down event spaces.</li>
+                        <li>Engage with attendees and answer questions.</li>
+                        <li>Assist in safely handling animals during events.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="role">
+                <div class="role__image-container">
+                    <img
+                        src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734292319/Foster_Parent_c1qbby.png"
+                        alt="Foster Parent"
+                        class="role__image">
+                </div>
+                <div class="role__content">
+                    <h3>Foster Parent</h3>
+                    <p>Provide a temporary home for animals that need extra care and attention. This role is ideal for those who can offer a
+                        loving, safe space for animals until they’re ready for adoption.</p>
+                    <ul>
+                        <li>Offer a safe and loving environment.</li>
+                        <li>Take care of feeding, exercise, and health needs.</li>
+                        <li>Communicate updates about pets with our team.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="role">
+                <div class="role__image-container">
+                    <img
+                        src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734292319/Administrative_Support_uxohfa.png"
+                        alt="Administrative Support"
+                        class="role__image">
+                </div>
+                <div class="role__content">
+                    <h3>Administrative Support</h3>
+                    <p>Help us with administrative tasks such as data entry, answering calls, or assisting with online outreach. This role
+                        is perfect for volunteers who are detail-oriented and tech-savvy.</p>
+                    <ul>
+                        <li>Assist with answering emails and phone calls.</li>
+                        <li>Update our adoption database and records.</li>
+                        <li>Help manage social media posts and campaigns.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="role">
+                <div class="role__image-container">
+                    <img
+                        src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734292322/Facility_Maintenance_d2nz4f.png"
+                        alt="Facility Maintenance"
+                        class="role__image">
+                </div>
+                <div class="role__content">
+                    <h3>Facility Maintenance</h3>
+                    <p>Help us keep our shelter in top shape. Volunteers in this role assist with cleaning, organization, and light
+                        maintenance work to ensure the animals are safe and comfortable.</p>
+                    <ul>
+                        <li>Clean common areas, play spaces, and supply rooms.</li>
+                        <li>Assist with organizing and restocking food, toys, and supplies.</li>
+                        <li>Perform light repairs or painting, as needed.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+         <section class="volunteer-pictures">
+        <div>
+            <img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734292323/Volunteer_dog2_xj4izh.png" alt="Volunteer1" class="volunteer__image">
+            <img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734292321/Donation_w50h8p.png" alt="Volunteer2" class="volunteer__image">
+            <img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734292324/Volunteer_dog_ikky2q.png" alt="Volunteer3" class="volunteer__image">
+            <img src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734292323/Volunteer_cat_qpf0do.png" alt="Volunteer4" class="volunteer__image">
+        </div>
+    </section>
+
+        <!-- How to Volunteer -->
+        <section class="volunteer-cta">
+            <h2>How to Volunteer</h2>
+            <p>Ready to make a difference? Follow these simple steps to become a volunteer:</p>
+            <ol>
+                <li>Fill out the
+                    <a href="/contact">Volunteer Form</a>
+                    with your details and availability.</li>
+                <li>Attend a short orientation to learn about our mission and safety procedures.</li>
+                <li>Start making an impact by participating in your chosen role!</li>
+            </ol>
+            <p>
+                <strong>Questions?</strong>
+                Feel free to
+                <a href="/contact">contact us</a>
+                for more information!</p>
+            <button class="btn btn--primary" onclick="window.location.href='/contact'">Sign Up to Volunteer</button>
+        </section>
+    </div>
+</section>
+  </main>
+  <footer class="site-footer">
+  <p>© 2024 Fhaungfha Suvannakajorn. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>

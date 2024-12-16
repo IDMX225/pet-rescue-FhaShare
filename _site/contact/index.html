@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pet Rescue site.">
+  <meta name="generator" content="Eleventy v2.0.1">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="shortcut icon" href="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/favicon_ezult7.png" type="image/png">
+</head>
+
+<body>
+  <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/">
+          <img 
+            src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/CS-Logo_gtrx87.png" 
+            class="logo-png" 
+            aria-label="Home page" 
+            alt="Canopy Share Pet Rescue logo"
+          />
+        </a>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="container">
+                <style>
+                    .container {
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+
+                    .change .bar1 {
+                        transform: translate(0, 7px) rotate(-45deg);
+                    }
+
+                    .change .bar2 {
+                        opacity: 0;
+                    }
+
+                    .change .bar3 {
+                        transform: translate(0, -7px) rotate(45deg);
+                    }
+                </style>
+                
+        <div class="hamburger-icon" onclick="toggleMenu(this)">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </label>
+
+      <!-- Navigation Links -->
+      <nav class="navbar">
+        <ul role="list" class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/adopt/">Adopt</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/volunteer/">Volunteer</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function toggleMenu(x) {
+    x.classList.toggle("change");
+  }
+</script>
+
+  <main>
+    <section class ="contact-information">
+  <h1>Contact Us</h1>
+  <p>Contact Us: petrescue@canopyshare.com</p>
+  <p>Phone: (123) 456-7890</p>
+  <p>Address: 123 Rescue Lane, Happy Tails City, NJ 12345</p>
+</section>
+
+<section class="contact-form">
+  <h2>Contact Us</h2>
+  <p>Please select your role and fill out the appropriate form.</p>
+
+  <!-- Role Selection -->
+  <div class="form-selection">
+    <label>
+      <input type="radio" name="form_type" value="other" onclick="showForm('other')" checked> Other
+    </label>
+    <label>
+      <input type="radio" name="form_type" value="adopter" onclick="showForm('adopter')"> Adopter
+    </label>
+    <label>
+      <input type="radio" name="form_type" value="volunteer" onclick="showForm('volunteer')"> Volunteer
+    </label>
+  </div>
+
+  <!-- Other Form -->
+  <form id="form-other" class="contact-form__content" action="/submit" method="POST">
+    <h3>General Inquiry</h3>
+    <label for="other-fname">First Name</label>
+    <input type="text" id="other-fname" name="first_name" required>
+
+    <label for="other-lname">Last Name</label>
+    <input type="text" id="other-lname" name="last_name" required>
+
+    <label for="other-phone">Phone</label>
+    <input type="tel" id="other-phone" name="phone" required>
+
+    <label for="other-email">Email</label>
+    <input type="email" id="other-email" name="email" required>
+
+    <label for="other-subject">Subject</label>
+    <input type="text" id="other-subject" name="subject" required>
+
+    <label for="other-message">Your Message</label>
+    <textarea id="other-message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Adopter Form -->
+  <form id="form-adopter" class="contact-form__content" style="display: none;" action="/submit" method="POST">
+    <h3>Adopter Form</h3>
+    <label for="adopter-fname">First Name</label>
+    <input type="text" id="adopter-fname" name="first_name" required>
+
+    <label for="adopter-lname">Last Name</label>
+    <input type="text" id="adopter-lname" name="last_name" required>
+
+    <label for="adopter-phone">Phone</label>
+    <input type="tel" id="adopter-phone" name="phone" required>
+
+    <label for="adopter-email">Email</label>
+    <input type="email" id="adopter-email" name="email" required>
+
+    <label for="adopter-pet">Pet of Interest</label>
+    <input type="text" id="adopter-pet" name="pet_interest" required>
+
+    <label for="adopter-date">Visit Date</label>
+    <input type="date" id="adopter-date" name="visit_date" required>
+
+    <label for="adopter-time">Visit Time</label>
+    <input type="time" id="adopter-time" name="visit_time" required>
+
+    <label for="adopter-message">Your Message</label>
+    <textarea id="adopter-message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Volunteer Form -->
+<form id="form-volunteer" class="contact-form__content" style="display: none;" action="/submit" method="POST">
+  <h3>Volunteer Form</h3>
+  
+  <!-- First Name -->
+  <label for="volunteer-fname">First Name</label>
+  <input type="text" id="volunteer-fname" name="first_name" required>
+
+  <!-- Last Name -->
+  <label for="volunteer-lname">Last Name</label>
+  <input type="text" id="volunteer-lname" name="last_name" required>
+
+  <!-- Phone -->
+  <label for="volunteer-phone">Phone</label>
+  <input type="tel" id="volunteer-phone" name="phone" required>
+
+  <!-- Email -->
+  <label for="volunteer-email">Email</label>
+  <input type="email" id="volunteer-email" name="email" required>
+
+  <!-- Volunteer Role -->
+  <label for="volunteer-role">Volunteer Role</label>
+  <input type="text" id="volunteer-role" name="volunteer_role" placeholder="e.g., Animal Care Assistant, Administrative Support" required>
+
+  <!-- Available Date -->
+  <label for="volunteer-date">Available Date</label>
+  <input type="date" id="volunteer-date" name="available_date" required>
+
+  <!-- Available Time -->
+  <fieldset>
+    <legend>Available Time</legend>
+    <label for="volunteer-start-time">Start Time</label>
+    <input type="time" id="volunteer-start-time" name="start_time" required>
+
+    <label for="volunteer-end-time">End Time</label>
+    <input type="time" id="volunteer-end-time" name="end_time" required>
+  </fieldset>
+
+  <!-- Message -->
+  <label for="volunteer-message">Your Message</label>
+  <textarea id="volunteer-message" name="message" rows="6" required></textarea>
+
+  <!-- Submit Button -->
+  <button type="submit">Submit</button>
+</form>
+
+</section>
+
+<!-- JavaScript to Toggle Forms -->
+<script>
+  function showForm(formType) {
+    document.getElementById("form-other").style.display = "none";
+    document.getElementById("form-adopter").style.display = "none";
+    document.getElementById("form-volunteer").style.display = "none";
+    document.getElementById(`form-${formType}`).style.display = "block";
+  }
+</script>
+
+  </main>
+  <footer class="site-footer">
+  <p>© 2024 Fhaungfha Suvannakajorn. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>

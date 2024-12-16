@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pet Rescue site.">
+  <meta name="generator" content="Eleventy v2.0.1">
+  <title>Adopt Page</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="shortcut icon" href="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/favicon_ezult7.png" type="image/png">
+</head>
+
+<body>
+  <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/">
+          <img 
+            src="https://res.cloudinary.com/dhvzkswkn/image/upload/v1734045374/CS-Logo_gtrx87.png" 
+            class="logo-png" 
+            aria-label="Home page" 
+            alt="Canopy Share Pet Rescue logo"
+          />
+        </a>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="container">
+                <style>
+                    .container {
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+
+                    .change .bar1 {
+                        transform: translate(0, 7px) rotate(-45deg);
+                    }
+
+                    .change .bar2 {
+                        opacity: 0;
+                    }
+
+                    .change .bar3 {
+                        transform: translate(0, -7px) rotate(45deg);
+                    }
+                </style>
+                
+        <div class="hamburger-icon" onclick="toggleMenu(this)">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </label>
+
+      <!-- Navigation Links -->
+      <nav class="navbar">
+        <ul role="list" class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/adopt/">Adopt</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/volunteer/">Volunteer</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function toggleMenu(x) {
+    x.classList.toggle("change");
+  }
+</script>
+
+  <main>
+    
+<div class="adopt-page">
+  <h1 class="section-title">Meet Our Adoptable Pets</h1>
+  <p>Browse through our list of adorable animals looking for their forever home. Filter by category to find your perfect match!</p>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All Pets</button>
+    <button class="filter-btn" data-filter="dog">Dogs</button>
+    <button class="filter-btn" data-filter="cat">Cats</button>
+    <button class="filter-btn" data-filter="other">Other</button>
+  </div>
+
+  <!-- Animal Cards List -->
+  <ul role="list" class="Animal__List"></ul>
+</div>
+
+<!-- Filtering Logic -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const animalCards = document.querySelectorAll(".animal-card");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+
+        // Update active button
+        document.querySelector(".filter-btn.active").classList.remove("active");
+        button.classList.add("active");
+
+        // Filter cards
+        animalCards.forEach(card => {
+          if (filter === "all" || card.dataset.category === filter) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
+  </main>
+  <footer class="site-footer">
+  <p>© 2024 Fhaungfha Suvannakajorn. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>
