@@ -12,7 +12,6 @@ tags:
 category: "dog"
 image: "https://res.cloudinary.com/dhvzkswkn/image/upload/v1734316558/Luna_-_1_irbais.png"
 imgAlt: "Luna, a beautiful husky with blue eyes"
-permalink: "/animal/{{ name | slugify }}/"
 ---
 
 Luna is a stunning Siberian Husky with piercing blue eyes. She is incredibly playful and loves long walks, running, and playing fetch. Luna would do best in a home with a yard where she can stretch her legs and burn energy.

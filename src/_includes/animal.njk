@@ -4,43 +4,24 @@ layout: 'base.njk'
 
 <article class="main-animal">
   <div class="container container--narrow flow">
-
-    <!-- Animal Image -->
-    {% if image %}
     <figure class="main-animal__figure">
-      <img src="{{ image }}" alt="{{ imgAlt | default: 'Image of ' + name }}">
-      {% if imgAlt %}
-      <figcaption>{{ imgAlt }}</figcaption>
-      {% endif %}
+      <img src="{{ image }}" alt="{{ imgAlt }}">
     </figure>
-    {% endif %}
-
-    <!-- Animal Details -->
     <h1 class="animal-title">{{ name }}</h1>
     <div class="animal-details">
-      <p><strong>Age:</strong> {{ ageYears | default: "0" }} Year(s) {{ ageMonths | default: "0" }} Month(s)</p>
-      <p><strong>Gender:</strong> {{ gender | default: "Unknown" }}</p>
-      <p><strong>Breed:</strong> {{ breed | default: "Unknown" }}</p>
-      <p><strong>Weight:</strong> {{ weight | default: "Unknown"  }}</p>
-      {% if status %}
+      <p><strong>Age:</strong> {{ ageYears}} Year(s) {{ ageMonths}} Month(s)</p>
+      <p><strong>Gender:</strong> {{ gender }}</p>
+      <p><strong>Breed:</strong> {{ breed }}</p>
+      <p><strong>Weight:</strong> {{ weight }}</p>
       <p><strong>Status:</strong> {{ status }}</p>
-      {% endif %}
-      {% if notes %}
       <p><strong>Notes:</strong> {{ notes }}</p>
-      {% endif %}
     </div>
-
-    <!-- Animal Description -->
-    {% if content %}
     <section class="animal-description">
       <h2>About {{ name }}</h2>
       {{ content | safe }}
     </section>
-    {% endif %}
   </div>
-
-  <!-- CTA Buttons -->
     <div class="animal-cta">
-      <a href="/contact{{ name | slugify }}" class="btn btn--primary">Contact Us for Adoption</a>
+      <a href="/contact" class="btn btn--primary">Contact Us for Adoption</a>
     </div>
 </article>

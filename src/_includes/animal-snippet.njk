@@ -4,9 +4,7 @@
     <img src="{{ animal.data.image  }}" class="animal_snippet__image" alt="{{ animal.data.image  }}">
 
     <!-- Animal Name -->
-    <h3 class="animal_snippet__title">
-      <a href="{{ animal.permalink }}">{{ animal.name }}</a>
-    </h3>
+    <h2 class="animal_snippet__title"> {{ animal.data.name }} </h2>
     <!-- Animal Details -->
     <p class="animal_snippet__details"><strong>Age:</strong> {{ animal.data.ageYears }} Year(s) {{ animal.data.ageMonths }} Month(s)</p>
     <p class="animal_snippet__details"><strong>Gender:</strong> {{ animal.data.gender }}</p>
@@ -15,6 +13,6 @@
     <p class="animal_snippet__details"><strong>Status:</strong> {{ animal.data.status }}</p>
 
     <!-- Buttons -->
-    <a href="{{ animal.permalink }}" class="btn btn--primary">More Info</a>
+    <a href="{{ animal.url }}" class="btn btn--primary">More Info</a>
   </article>
 </li>
