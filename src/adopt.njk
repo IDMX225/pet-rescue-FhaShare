@@ -16,11 +16,9 @@ layout: "base.njk"
   </div>
 
   <!-- Animal Cards List -->
-  <ul role="list" class="articles__list flow">
-    {%- for animal in collections.animal | reverse -%}
-      <li class="animal-card" data-category="{{ animal.data.category }}">
-        {% include 'animal-snippet.njk' with animal %}
-      </li>
+  <ul role="list" class="Animal__List">
+    {%- for animal in collections.animal| reverse -%}
+    {% include 'animal-snippet.njk' %}
     {%- endfor -%}
   </ul>
 </div>
@@ -41,7 +39,7 @@ layout: "base.njk"
 
         // Filter cards
         animalCards.forEach(card => {
-          if (filter === "all" || card.getAttribute("data-category") === filter) {
+          if (filter === "all" || card.dataset.category === filter) {
             card.style.display = "block";
           } else {
             card.style.display = "none";
