@@ -17,8 +17,10 @@ layout: 'base.njk'
       <p><strong>Notes:</strong> {{ notes }}</p>
     </div>
     <section class="animal-description">
-      <h2>About {{ name }}</h2>
-      {{ content | safe }}
+      <div class="container container--narrow">
+        <h2>About {{ name }}</h2>
+        <p>{{ content | safe }}</p>
+      </div>
     </section>
   </div>
     <div class="animal-cta">

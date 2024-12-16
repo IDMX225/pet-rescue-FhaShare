@@ -19,3 +19,5 @@ Luna is a stunning Siberian Husky with piercing blue eyes. She is incredibly pla
 She is friendly with other dogs but may not be suitable for homes with cats due to her prey drive. Luna is crate-trained, housebroken, and knows basic commands such as sit, stay, and come. She would thrive with an adopter who has experience with energetic breeds.
 
 If you are looking for a loyal and active companion, Luna might be the perfect fit for you!
+
+![](https://res.cloudinary.com/dhvzkswkn/image/upload/v1734316557/Luna_-_2_sd0dst.png)
