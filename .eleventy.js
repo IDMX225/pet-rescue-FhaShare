@@ -21,6 +21,10 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  let markdownIt = require("markdown-it");
+  let markdownItAnchor = require("markdown-it-anchor");
+  eleventyConfig.setLibrary("md", markdownIt({ html: true }).use(markdownItAnchor));
+
   return {
     dir: {
       input: 'src/',

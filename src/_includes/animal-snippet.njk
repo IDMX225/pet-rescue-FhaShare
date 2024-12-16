@@ -1,20 +1,20 @@
 <li>
   <article class="animal_snippet">
     <!-- Animal Image -->
-    <img src="{{ animal.image }}" class="animal_snippet__image" alt="{{ animal.imgAlt }}">
+    <img src="{{ animal.data.image  }}" class="animal_snippet__image" alt="{{ animal.data.image  }}">
 
     <!-- Animal Name -->
     <h3 class="animal_snippet__title">
-      <a href="{{ animal.url }}">{{ animal.name }}</a>
+      <a href="{{ animal.permalink }}">{{ animal.name }}</a>
     </h3>
-
     <!-- Animal Details -->
-    <p class="animal_snippet__details"><strong>Age:</strong> {{ animal.ageYears }} Year(s) {{ animal.ageMonths }} Month(s)</p>
-    <p class="animal_snippet__details"><strong>Gender:</strong> {{ animal.gender }}</p>
-    <p class="animal_snippet__details"><strong>Breed:</strong> {{ animal.breed }}</p>
-    <p class="animal_snippet__details"><strong>Weight:</strong> {{ animal.weight }}</p>
+    <p class="animal_snippet__details"><strong>Age:</strong> {{ animal.data.ageYears }} Year(s) {{ animal.data.ageMonths }} Month(s)</p>
+    <p class="animal_snippet__details"><strong>Gender:</strong> {{ animal.data.gender }}</p>
+    <p class="animal_snippet__details"><strong>Breed:</strong> {{ animal.data.breed }}</p>
+    <p class="animal_snippet__details"><strong>Weight:</strong> {{ animal.data.weight }}</p>
+    <p class="animal_snippet__details"><strong>Status:</strong> {{ animal.data.status }}</p>
 
     <!-- Buttons -->
-    <a href="{{ animal.url }}" class="btn btn--primary">More Info</a>
+    <a href="{{ animal.permalink }}" class="btn btn--primary">More Info</a>
   </article>
 </li>
