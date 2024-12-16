@@ -8,7 +8,7 @@ layout: "base.njk"
   <p>Browse through our list of adorable animals looking for their forever home. Filter by category to find your perfect match!</p>
 
   <!-- Animal Cards List -->
-  <ul role="list" class="Animal__List">
+  <ul role="list" class="animal_list">
     {%- for animal in collections.animal| reverse -%}
     {% include 'animal-snippet.njk' %}
     {%- endfor -%}

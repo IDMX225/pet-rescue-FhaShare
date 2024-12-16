@@ -467,7 +467,7 @@ h1 {
 }
 
 /* //////////////////////
-// blog Page
+   blog Page
 /////////////////////// */
 .blog-page {
   padding: 5% 10%;
@@ -481,3 +481,160 @@ h1 {
     font-size: var(--fs-700);
   }
 }
+
+/* //////////////////////
+  Adopt page
+  /////////////////////// */
+  
+  .adopt-page {
+    padding: 2rem 10%;
+
+    h1 {
+      font-size: var(--fs-700);
+    }
+
+    h1, h2 {
+      color: var(--clr-primary-500);
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: var(--fs-400);
+    }
+      
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    .animal_list {
+      display: flex;
+      gap: 2rem;
+      padding: 0;
+      margin: 2rem;
+  
+      .animal_snippet {
+        background-color: var(--clr-primary-100);
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.758);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem;
+        
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 4px 20px rgba(49, 81, 30, 0.912); 
+        }
+  
+        &__image {
+          width: 100%;
+          max-width: 200px;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-bottom: 1rem;
+          align-self: center;
+        }
+  
+        &__title {
+          font-size: var(--fs-500);
+          font-weight: var(--fw-700);
+          margin-bottom: 0.5rem;
+          text-align: center;
+        }
+  
+        &__details {
+          font-size: var(--fs-400);
+          margin: 0.25rem 0;
+          text-align: left;
+  
+          strong {
+            color: var(--clr-neutral-900);
+            font-weight: bold;
+          }
+        }
+  
+        .btn {
+          display: flex;
+          padding: 0.75rem 1.5rem;
+          background-color: var(--clr-primary-400);
+          color: var(--clr-neutral-100);
+          border-radius: 8px;
+          font-weight: var(--fw-700);
+          margin-top: 1rem;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+          align-self: center;
+  
+          &:hover {
+            background-color: var(--clr-primary-500);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: var(--fs-600);
+      }
+    }
+  }
+
+  
+
+  /* //////////////////////
+  Individual animal page
+  /////////////////////// */
+  
+  .main-animal {
+    padding: 5% 10%;
+
+    h1 {
+      color: var(--clr-primary-500);
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      text-align: center;
+      text-shadow: 2.5px -1px 3px rgba(0, 0, 0, 0.31);
+      font-size: var(--fs-700);  
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+  
+    img, picture {
+      display: flex;
+      max-width: 40%;
+      justify-self: center;
+      border-radius: 10%;
+    }
+
+    .animal-details {
+
+      p {
+        line-height: 2;
+      }
+    }
+
+    .animal-description {
+      padding: 0;
+      margin-bottom: 2rem;
+
+      p {
+      line-height: 1.5;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .main-animal {
+        margin-top: 5rem;
+
+        .main-animal img, picture {
+          max-width: 100%;
+          border-radius: 10%;
+        }
+      }
+    }
+  }
